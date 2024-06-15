@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mystery Box Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="layer">
+      <div class="participant_form">
+        <form id="participantForm" class="participant-form">
+          <!-- <label for="name">Name:</label> -->
+          <input
+            type="text"
+            placeholder="Name"
+            id="name"
+            name="name"
+            required
+          />
+          <!-- <label for="mobile">Mobile Number:</label> -->
+          <input
+            type="text"
+            placeholder="Mobile Number"
+            id="mobile"
+            name="mobile"
+            required
+          />
+          <!-- <button type="submit">Submit</button> -->
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="start_btn hideBtn">
+        <button>
+          <span>Start Quiz</span>
+        </button>
+      </div>
+      <div class="info_box">
+        <div class="info-title"><span>Some Rules of this Quiz</span></div>
+        <div class="info-list">
+          <div class="info">
+            1. You will have only <span>15 seconds</span> per each question.
+          </div>
+          <div class="info">
+            2. Once you select your answer, it can't be undone.
+          </div>
+          <div class="info">
+            3. You can't select any option once time goes off.
+          </div>
+          <div class="info">
+            4. You can't exit from the Quiz while you're playing.
+          </div>
+          <div class="info">
+            5. You'll get points on the basis of your correct answers.
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="quit">Exit Quiz</button>
+          <button class="restart">Continue</button>
+        </div>
+      </div>
+      <div class="quiz_box">
+        <header>
+          <div class="title">Mystery Box Quiz</div>
+        </header>
+        <section>
+          <div class="que_text"></div>
+          <div class="option_list"></div>
+        </section>
+        <footer>
+          <div class="total_que"></div>
+          <button class="next_btn">Next</button>
+        </footer>
+      </div>
+      <div class="result_box">
+        <div class="icon">
+          <i class="fas fa-crown"></i>
+        </div>
+        <div class="score_text"></div>
+        <div class="buttons">
+          <button class="quit">Quit Quiz</button>
+        </div>
+      </div>
+    </div>
+    <audio
+      controls="controls"
+      id="applause"
+      src="applause.mp3"
+      type="audio/mp3"
+    ></audio>
+    <script src="js/questions.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document.body.style.overflow = "hidden";
+      });
+    </script>
+  </body>
+</html>
