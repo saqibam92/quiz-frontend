@@ -36,13 +36,16 @@
     const mobile = participantForm.mobile.value;
 
     try {
-      const response = await fetch("http://localhost:8080/api/participants", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, mobile }),
-      });
+      const response = await fetch(
+        "https://quiz-backend-y0gx.onrender.com/api/participants",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, mobile }),
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
@@ -182,13 +185,16 @@
 
     // Send answers to the backend
     try {
-      const response = await fetch("http://localhost:8080/api/answers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ participantId, answers }),
-      });
+      const response = await fetch(
+        "https://quiz-backend-y0gx.onrender.com/api/answers",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ participantId, answers }),
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
