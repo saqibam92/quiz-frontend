@@ -29,7 +29,8 @@ body {
 .layer {
     height: 100vh;
     width: 100%;
-    background-image: url(./images/Mystery-Box-Poster.jpg);
+    background-image: url(./images/LED_Screen_Quiz_Poster.jpg);
+/*     background-image: url(./images/Mystery-Box-Poster.jpg); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
